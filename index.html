@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>TG Зірки — Купити Telegram Stars дешево в Україні</title>
+  <meta name="description" content="Купуй Telegram Stars дешево та швидко. Ціна від 0.90 грн за зірку. Оплата в гривнях. Зв'язок у Telegram @Lampo4ka_Mini." />
+  <meta name="keywords" content="Telegram Stars, купити зірки телеграм, TG зірки, telegram stars Україна, telegram stars ціна грн, купити телеграм зірки" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Lampo4ka_Mini" />
+  <link rel="canonical" href="https://tg-stars.shop/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="TG Зірки — Купити Telegram Stars дешево" />
+  <meta property="og:description" content="Telegram Stars від 0.90 грн. Швидко, вигідно, надійно." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://telegra.ph/file/telegram-stars.jpg" />
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "TG Зірки",
+    "description": "Магазин Telegram Stars. Купити зірки Telegram дешево в Україні.",
+    "url": "https://tg-stars.shop/",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "url": "https://t.me/Lampo4ka_Mini"
+    }
+  }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #07071A;
+      --surface: #0F0F2B;
+      --card: #141430;
+      --card-hover: #1C1C42;
+      --gold: #FFD700;
+      --gold2: #FFA500;
+      --purple: #7C3AED;
+      --purple2: #A855F7;
+      --text: #E8E8FF;
+      --muted: #8888BB;
+      --border: rgba(124, 58, 237, 0.25);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── Canvas starfield ── */
+    #stars-canvas {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* ── Layout ── */
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ── Hero ── */
+    header {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 80px 20px 60px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--purple2);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 6px 16px;
+      margin-bottom: 24px;
+      background: rgba(124, 58, 237, 0.08);
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 8vw, 4.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      margin-bottom: 18px;
+    }
+
+    h1 .star-word {
+      background: linear-gradient(135deg, var(--gold), var(--gold2), var(--purple2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto 36px;
+      line-height: 1.65;
+    }
+
+    .hero-price {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, rgba(255,215,0,0.12), rgba(124,58,237,0.12));
+      border: 1px solid rgba(255, 215, 0, 0.2);
+      border-radius: 16px;
+      padding: 14px 28px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--gold);
+    }
+
+    /* ── Stats row ── */
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin: 0 auto 60px;
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stat { text-align: center; }
+    .stat-num {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .stat-lbl {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 2px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Section title ── */
+    .section-title {
+      text-align: center;
+      font-size: 1.55rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .section-sub {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 36px;
+    }
+
+    /* ── Pricing grid ── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px 20px;
+      text-align: center;
+      transition: transform 0.22s, background 0.22s, border-color 0.22s, box-shadow 0.22s;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 50% 50%, rgba(255,215,0,0.06) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: var(--card-hover);
+      border-color: rgba(255, 215, 0, 0.35);
+      box-shadow: 0 12px 40px rgba(255, 215, 0, 0.12);
+    }
+
+    .card:hover::before { opacity: 1; }
+
+    .card.popular {
+      border-color: var(--gold);
+      background: linear-gradient(145deg, #1C1A3A, #1A1830);
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: -1px;
+      right: 16px;
+      background: linear-gradient(90deg, var(--gold), var(--gold2));
+      color: #000;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .card-stars {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+      letter-spacing: 1px;
+    }
+
+    .card-amount {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .card-per {
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .card-price {
+      font-size: 1.55rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--gold), var(--gold2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .card-currency {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* ── CTA ── */
+    .cta-block {
+      text-align: center;
+      margin-bottom: 70px;
+      padding: 48px 32px;
+      background: linear-gradient(135deg, rgba(124,58,237,0.15), rgba(255,215,0,0.06));
+      border: 1px solid var(--border);
+      border-radius: 24px;
+    }
+
+    .cta-block h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .cta-block p {
+      color: var(--muted);
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    .tg-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--purple), var(--purple2));
+      color: #fff;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 15px 36px;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 24px rgba(124, 58, 237, 0.4);
+    }
+
+    .tg-btn:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(124, 58, 237, 0.55);
+    }
+
+    .tg-btn svg { flex-shrink: 0; }
+
+    .tg-handle {
+      display: block;
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* ── Footer ── */
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 28px 20px 40px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.8rem;
+      line-height: 1.8;
+    }
+
+    footer a { color: var(--purple2); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 500px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+      .stats { gap: 24px; }
+    }
+      .shop-name {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--purple2);
+      margin-bottom: 12px;
+    }
+    .cta-buttons {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 0;
+    }
+    .reviews-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 15px 28px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s, background 0.2s;
+    }
+    .reviews-btn:hover {
+      transform: translateY(-2px);
+      border-color: var(--purple2);
+      background: rgba(168,85,247,0.1);
+    }
+
+    /* ── Checkout page ── */
+    #checkout {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: var(--bg);
+      overflow-y: auto;
+    }
+    #checkout.active { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-height: 100vh; padding: 60px 20px 40px; }
+    .checkout-box {
+      position: relative;
+      z-index: 1;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 48px 36px;
+      max-width: 460px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 24px 80px rgba(124,58,237,0.18);
+    }
+    .checkout-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--purple2);
+      margin-bottom: 20px;
+    }
+    .checkout-stars-emoji { font-size: 2rem; margin-bottom: 10px; letter-spacing: 2px; }
+    .checkout-amount {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .checkout-price {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--gold), var(--gold2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 16px 0 6px;
+    }
+    .checkout-currency { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+    .checkout-buy-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: linear-gradient(135deg, var(--purple), var(--purple2));
+      color: #fff;
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 17px 20px;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 24px rgba(124,58,237,0.4);
+      margin-bottom: 14px;
+    }
+    .checkout-buy-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(124,58,237,0.55); }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-family: inherit;
+      font-size: 0.9rem;
+      padding: 11px 22px;
+      border-radius: 12px;
+      cursor: pointer;
+      width: 100%;
+      justify-content: center;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .back-btn:hover { border-color: var(--purple2); color: var(--text); }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
+    .checkout-note { font-size: 0.78rem; color: var(--muted); }
+
+    .copy-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      background: rgba(255,215,0,0.1);
+      border: 1px solid rgba(255,215,0,0.3);
+      color: var(--gold);
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 13px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-bottom: 12px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .copy-btn:hover { background: rgba(255,215,0,0.18); border-color: var(--gold); }
+    .copy-btn.copied { background: rgba(0,200,100,0.12); border-color: rgba(0,200,100,0.4); color: #4ade80; }
+    .checkout-order-text {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+      word-break: break-word;
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="stars-canvas"></canvas>
+
+<!-- ══ HEADER ══ -->
+<header>
+  <div class="shop-name">Lampo4kaShop</div>
+  <div class="badge">⭐ Офіційний магазин</div>
+  <h1>Купуй <span class="star-word">Telegram Stars</span><br>дешево та швидко</h1>
+  <p class="hero-sub">Зірки в гривнях — швидко і надійно.</p>
+  <div class="hero-price">1⭐ — <strong>0.90 грн</strong></div>
+</header>
+
+<!-- ══ STATS ══ -->
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><div class="stat-num">13.5₴</div><div class="stat-lbl">Мінімальна ціна</div></div>
+    <div class="stat"><div class="stat-num">⚡ 5-30 хв</div><div class="stat-lbl">Відповідь</div></div>
+    <div class="stat"><div class="stat-num">100%</div><div class="stat-lbl">Надійно</div></div>
+    <div class="stat"><div class="stat-num">🇺🇦 UAH</div><div class="stat-lbl">Оплата в гривнях</div></div>
+  </div>
+
+  <!-- ══ PRICING ══ -->
+  <p class="section-title">Прайс-лист ⭐</p>
+  <p class="section-sub">Оберіть потрібну кількість зірок</p>
+
+  <div class="grid">
+
+<div class="card">
+      <div class="card-stars">⭐</div>
+      <div class="card-amount">15 зірок</div>
+      <div class="card-per">0.90 грн / зірка</div>
+      <div class="card-price">13.50</div>
+      <div class="card-currency">гривень</div>
+    </div>
+
+    <div class="card">
+      <div class="card-stars">⭐⭐</div>
+      <div class="card-amount">25 зірок</div>
+      <div class="card-per">0.90 грн / зірка</div>
+      <div class="card-price">22.50</div>
+      <div class="card-currency">гривень</div>
+    </div>
+
+    <div class="card">
+      <div class="card-stars">⭐⭐</div>
+      <div class="card-amount">30 зірок</div>
+      <div class="card-per">0.90 грн / зірка</div>
+      <div class="card-price">27.00</div>
+      <div class="card-currency">гривень</div>
+    </div>
+
+    <div class="card">
+      <div class="card-stars">⭐⭐⭐</div>
+      <div class="card-amount">45 зірок</div>
+      <div class="card-per">0.90 грн / зірка</div>
+      <div class="card-price">40.50</div>
+      <div class="card-currency">гривень</div>
+    </div>
+
+    <div class="card popular">
+      <div class="popular-badge">🔥 Хіт</div>
+      <div class="card-stars">⭐⭐⭐</div>
+      <div class="card-amount">50 зірок</div>
+      <div class="card-per">0.90 грн / зірка</div>
+      <div class="card-price">45.00</div>
+      <div class="card-currency">гривень</div>
+    </div>
+
+    <div class="card">
+      <div class="card-stars">⭐⭐⭐⭐</div>
+      <div class="card-amount">65 зірок</div>
+      <div class="card-per">0.90 грн / зірка</div>
+      <div class="card-price">58.50</div>
+      <div class="card-currency">гривень</div>
+    </div>
+
+    <div class="card">
+      <div class="card-stars">⭐⭐⭐⭐</div>
+      <div class="card-amount">80 зірок</div>
+      <div class="card-per">0.90 грн / зірка</div>
+      <div class="card-price">72.00</div>
+      <div class="card-currency">гривень</div>
+    </div>
+
+    <div class="card">
+      <div class="card-stars">⭐⭐⭐⭐⭐</div>
+      <div class="card-amount">95 зірок</div>
+      <div class="card-per">0.90 грн / зірка</div>
+      <div class="card-price">85.50</div>
+      <div class="card-currency">гривень</div>
+    </div>
+
+    <div class="card popular">
+      <div class="popular-badge">💎 Топ</div>
+      <div class="card-stars">⭐⭐⭐⭐⭐</div>
+      <div class="card-amount">100 зірок</div>
+      <div class="card-per">0.90 грн / зірка</div>
+      <div class="card-price">90.00</div>
+      <div class="card-currency">гривень</div>
+    </div>
+
+  </div>
+
+  <!-- ══ CTA ══ -->
+  <div class="cta-block">
+    <h2>Готовий купити? ✨</h2>
+    <p>Напиши нам у Telegram — відповімо за 5–30 хвилин.</p>
+    <div class="cta-buttons">
+      <a class="tg-btn" href="https://t.me/Lampo4ka_Mini" target="_blank" rel="noopener">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.23 13.99l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.918.569z"/>
+        </svg>
+        Написати в Telegram
+      </a>
+      <a class="reviews-btn" href="https://t.me/Lampo4kaShopReviews" target="_blank" rel="noopener">
+        💬 Відгуки
+      </a>
+    </div>
+    <span class="tg-handle">@Lampo4ka_Mini</span>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <p>Для покупки писати в TG: <a href="https://t.me/Lampo4ka_Mini" target="_blank">@Lampo4ka_Mini</a></p>
+  <p style="margin-top:8px;">© 2025 TG Зірки · Telegram Stars · Усі права захищені</p>
+</footer>
+
+<!-- ══ Starfield animation ══ -->
+<script>
+  const canvas = document.getElementById('stars-canvas');
+  const ctx = canvas.getContext('2d');
+
+  let W, H, stars = [];
+
+  function resize() {
+    W = canvas.width  = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+
+  function makeStars(n) {
+    stars = [];
+    for (let i = 0; i < n; i++) {
+      stars.push({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        r: Math.random() * 1.2 + 0.2,
+        a: Math.random(),
+        speed: Math.random() * 0.004 + 0.001,
+        phase: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function draw(t) {
+    ctx.clearRect(0, 0, W, H);
+    for (const s of stars) {
+      const alpha = 0.25 + 0.75 * (0.5 + 0.5 * Math.sin(t * s.speed * 1000 + s.phase));
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(220,210,255,${alpha * s.a})`;
+      ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+
+
+  // ── Checkout logic ──
+  const packages = [
+    { stars: 15,  emoji: '⭐',           price: '13.50' },
+    { stars: 25,  emoji: '⭐⭐',         price: '22.50' },
+    { stars: 30,  emoji: '⭐⭐',         price: '27.00' },
+    { stars: 45,  emoji: '⭐⭐⭐',       price: '40.50' },
+    { stars: 50,  emoji: '⭐⭐⭐',       price: '45.00' },
+    { stars: 65,  emoji: '⭐⭐⭐⭐',     price: '58.50' },
+    { stars: 80,  emoji: '⭐⭐⭐⭐',     price: '72.00' },
+    { stars: 95,  emoji: '⭐⭐⭐⭐⭐',   price: '85.50' },
+    { stars: 100, emoji: '⭐⭐⭐⭐⭐',   price: '90.00' },
+  ];
+
+  document.querySelectorAll('.grid .card').forEach((card, i) => {
+    card.addEventListener('click', () => {
+      const pkg = packages[i];
+      document.getElementById('co-emoji').textContent   = pkg.emoji;
+      document.getElementById('co-amount').textContent  = pkg.stars + ' зірок';
+      document.getElementById('co-price').textContent   = pkg.price;
+      const msg = 'Хочу купити ' + pkg.stars + ' зірок за ' + pkg.price + ' грн';
+      document.getElementById('co-order-text').textContent = msg;
+      document.getElementById('co-btn').href = 'https://t.me/Lampo4ka_Mini';
+      document.getElementById('co-copy-btn').textContent = '📋 Скопіювати замовлення';
+      document.getElementById('co-copy-btn').classList.remove('copied');
+      document.getElementById('checkout').classList.add('active');
+      window.scrollTo(0, 0);
+    });
+  });
+
+
+  function copyOrder() {
+    const text = document.getElementById('co-order-text').textContent;
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try { document.execCommand('copy'); } catch(e) {}
+    document.body.removeChild(ta);
+    const btn = document.getElementById('co-copy-btn');
+    btn.textContent = '✅ Скопійовано!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = '📋 Скопіювати замовлення';
+      btn.classList.remove('copied');
+    }, 2500);
+  }
+
+  function closeCheckout() {
+    document.getElementById('checkout').classList.remove('active');
+  }
+
+  resize();
+  makeStars(200);
+  window.addEventListener('resize', () => { resize(); makeStars(200); });
+  requestAnimationFrame(draw);
+</script>
+
+<!-- ══ CHECKOUT PAGE ══ -->
+<div id="checkout">
+  <canvas id="stars-canvas2" style="position:fixed;inset:0;z-index:0;pointer-events:none;"></canvas>
+  <div class="checkout-box">
+    <div class="checkout-label">Ваше замовлення</div>
+    <div class="checkout-stars-emoji" id="co-emoji">⭐</div>
+    <div class="checkout-amount" id="co-amount">15 зірок</div>
+    <div class="checkout-price" id="co-price">13.50</div>
+    <div class="checkout-currency">гривень</div>
+    <div class="checkout-order-text" id="co-order-text">Хочу купити 15 зірок за 13.50 грн</div>
+    <button class="copy-btn" id="co-copy-btn" onclick="copyOrder()">📋 Скопіювати замовлення</button>
+    <a class="checkout-buy-btn" id="co-btn" href="https://t.me/Lampo4ka_Mini" target="_blank" rel="noopener">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.23 13.99l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.918.569z"/>
+      </svg>
+      Відкрити Telegram
+    </a>
+    <hr class="divider">
+    <button class="back-btn" onclick="closeCheckout()">← Назад до прайсу</button>
+    <p class="checkout-note" style="margin-top:16px;">Скопіюй замовлення → відкрий Telegram → встав і надішли.</p>
+  </div>
+</div>
+
+</body>
+</html>
